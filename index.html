@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kevin's Future Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="scripts/jquery.cycle.all.js"></script>
+  </head>
+  <body>
+  	<div class="topBar">
+	  	<h1>👉 dribbble.com/eatsleepvector</h1>
+	  	<h1>👋 eatsleepvector@gmail.com</h1>
+ 	</div>
+ 	<div class="work">
+	 	<div id="gallery">
+	 		<img src="images/img-bg.jpg" />
+			<img src="images/1.png" />
+			<img src="images/2.png" />
+			<img src="images/3.png" />
+			<img src="images/4.png" />
+			<img src="images/5.png" />
+			<img src="images/6.png" />
+			<img src="images/7.png" />
+			<img src="images/8.png" />
+			<img src="images/9.png" />
+			<img src="images/10.png" />
+			<img src="images/11.png" />
+			<img src="images/12.png" />
+			<img src="images/13.png" />
+			<img src="images/14.png" />
+			<img src="images/15.png" />
+			<img src="images/16.png" />
+		</div>
+	</div>
+  	<ul>
+  		<li>
+		  	<a href="#" class="presentation-inner">
+			    <span >L</span>
+			    <span >E</span>
+			    <span >A</span>
+			    <span >G</span>
+			    <span >U</span>
+			    <span >E</span>
+			    <span >&nbsp;</span>
+			    <span >O</span>
+			    <span >F</span>
+			    <span >&nbsp</span>
+			    <span >L</span>
+			    <span >E</span>
+			    <span >G</span>
+			    <span >E</span>
+			    <span >N</span>
+			    <span >D</span>
+			    <span >S</span>
+			</a>
+		</li>
+		<li>
+		  	<a href="#" class="presentation-inner">
+			    <span >D</span>
+			    <span >I</span>
+			    <span >G</span>
+			    <span >I</span>
+			    <span >T</span>
+			    <span >A</span>
+			    <span >L</span>
+			    <span >O</span>
+			    <span >C</span>
+			    <span >E</span>
+			    <span >A</span>
+			    <span >N</span>
+			</a>
+		</li>
+		<li>
+		  	<a href="#" class="presentation-inner">
+			    <span >N</span>
+			    <span >E</span>
+			    <span >G</span>
+			    <span >A</span>
+			    <span >T</span>
+			    <span >I</span>
+			    <span >V</span>
+			    <span >E</span>
+			    <span >&nbsp;</span>
+			    <span >S</span>
+			    <span >P</span>
+			    <span >A</span>
+			    <span >C</span>
+			    <span >E</span>
+			</a>
+		</li>
+		<li>
+		  	<a href="#" class="presentation-inner">
+			    <span >M</span>
+			    <span >I</span>
+			    <span >C</span>
+			    <span >R</span>
+			    <span >O</span>
+			    <span >S</span>
+			    <span >O</span>
+			    <span >F</span>
+			    <span >T</span>
+			</a>
+		</li>
+		<li>
+		  	<a href="#" class="presentation-inner">
+			    <span >I</span>
+			    <span >B</span>
+			    <span >M</span>
+			    <span >&nbsp;</span>
+			    <span >M</span>
+			    <span >A</span>
+			    <span >E</span>
+			    <span >L</span>
+			    <span >S</span>
+			    <span >T</span>
+			    <span >R</span>
+			    <span >O</span>
+			    <span >M</span>
+			</a>
+		</li>
+		<li>
+		  	<a href="#" class="presentation-inner">
+			    <span >T</span>
+			    <span >H</span>
+			    <span >E</span>
+			    <span >&nbsp;</span>
+			    <span >B</span>
+			    <span >E</span>
+			    <span >E</span>
+			    <span >R</span>
+			    <span >&nbsp;</span>
+			    <span >P</span>
+			    <span >R</span>
+			    <span >O</span>
+			    <span >J</span>
+			    <span >E</span>
+			    <span >C</span>
+			    <span >T</span>
+			</a>
+		</li>
+		<li>
+		  	<a href="#" class="presentation-inner">
+			    <span >A</span>
+			    <span >D</span>
+			    <span >W</span>
+			    <span >E</span>
+			    <span >E</span>
+			    <span >K</span>
+			</a>
+		</li>
+	</ul>
+
+    <script type="text/javascript">
+		function buildCycle() {
+		    $("#gallery").cycle({
+		        fx: 'none',
+		        speed: 1,
+		        timeout: 100,
+		        startingSlide: 0,
+		    }).cycle("pause");
+		}
+		jQuery(function ($) {
+		    buildCycle();
+
+		    // Pause & play on hover
+		    $(".work").mouseover(function () {
+		        $(this).find("#gallery").addClass('active').cycle('resume');
+		    }).mouseleave(function () {
+		        $(this).find("#gallery").removeClass('active').cycle('pause');
+		        buildCycle();
+		    });
+
+		});
+    </script>
+
+     <script type="text/javascript">
+		const config = {
+		  rootMargin: '-40% 0px -40%',
+		  threshold: [1]
+		};
+
+		const items = document.querySelectorAll('li');
+
+		observer = new IntersectionObserver((entries) => {
+		  entries.forEach(entry => {
+		    if (entry.intersectionRatio > 0) {
+		      entry.target.classList.add('visible');
+		    } else {
+		      entry.target.classList.remove('visible');
+		    }
+		  });
+		});
+
+		items.forEach(item => {
+		  observer.observe(item);
+		});
+    </script>
+
+  </body>
+</html>
