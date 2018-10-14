@@ -1,0 +1,138 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'Compressa';
+  src: url(../fonts/Compressa-MICRO-GX-Rg.ttf) format("truetype"), url("../fonts/Compressa-MICRO-GX-Rg.woff2") format("woff2"), url("../fonts/Compressa-MICRO-GX-Rg.woff") format("woff"); }
+
+@font-face {
+  font-family: 'League';
+  src: url(../fonts/LeagueMonoVariable.ttf) format("truetype"); }
+
+body {
+  font-family: 'League', serif; }
+
+h1 {
+  font-size: 20px;
+  font-variation-settings: 'wght' 300, 'wdth' 100;
+  display: inline-block;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.hideme {
+  opacity: 0; }
+
+@keyframes boom {
+  0% {
+    transform: scale(0.65);
+    opacity: 0; }
+  100% {
+    transform: none;
+    opacity: 1; } }
+
+.visible {
+  animation-name: boom;
+  animation-duration: .667s;
+  animation-fill-mode: both; }
+
+.topBar {
+  position: fixed;
+  top: 0;
+  right: 7vw; }
+
+.right {
+  float: right; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none;
+  margin-top: 330px;
+  padding: 5px; }
+
+li {
+  text-align: center;
+  margin-bottom: 12vw; }
+
+.work {
+  top: 60px;
+  right: 7vw;
+  width: 55.6vw;
+  height: 41.75vw;
+  position: fixed;
+  z-index: -1;
+  overflow: hidden; }
+
+.work div {
+  position: absolute; }
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; }
+
+.presentation-inner {
+  font-size: 0;
+  padding-bottom: 15px;
+  border-bottom: 1.25vw solid rgba(0, 0, 255, 0);
+  color: black; }
+
+.presentation-inner:hover {
+  border-bottom: 1.25vw solid blue; }
+
+.presentation-inner span {
+  display: inline-block;
+  font-size: 12vw;
+  transition: all 0.33s cubic-bezier(0.25, 0, 0.15, 1);
+  cursor: pointer;
+  font-variation-settings: 'wght' 600, 'wdth' 1; }
+
+.presentation-inner span:hover {
+  font-variation-settings: 'wght' 600, 'wdth' 100;
+  color: blue; }
